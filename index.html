@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seekonix</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Prism.js for code highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <button class="icon-btn menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <button class="icon-btn edit-btn">
+                    <span class="material-symbols-outlined">edit_square</span>
+                </button>
+            </div>
+            <div class="sidebar-bottom">
+                <button class="icon-btn settings-btn">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div class="logo">Seekonix</div>
+                <div class="nav-actions">
+                    <button class="upgrade-btn">
+                        <span class="material-symbols-outlined spark-icon">stars</span>
+                        Upgrade to Google AI Plus
+                    </button>
+                    <button class="icon-btn apps-btn">
+                        <span class="material-symbols-outlined">apps</span>
+                    </button>
+                    <div class="profile-avatar">P</div>
+                </div>
+            </header>
+
+            <!-- Center Chat/Welcome Area -->
+            <div class="chat-area">
+                <div class="welcome-container">
+                    <h1 class="greeting">
+                        <span class="gradient-text">✨ Hi Pitta</span>
+                    </h1>
+                    <h2 class="subtitle">
+                        I'm ready to help you plan, study, bring ideas to life & more.
+                    </h2>
+                </div>
+                <!-- Chat History Area (Initially Hidden) -->
+                <div class="chat-history hidden" id="chatHistory"></div>
+
+                <!-- Input Box -->
+                <div class="input-wrapper">
+                    <!-- Upload Indicator -->
+                    <div id="fileIndicator" class="hidden file-indicator">
+                        <div class="file-info">
+                            <span class="material-symbols-outlined file-icon">description</span>
+                            <span id="fileNameDisplay">document.pdf</span>
+                        </div>
+                        <button id="removeFileBtn" class="icon-btn tiny-btn">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                    
+                    <input type="text" placeholder="Ask Seekonix" class="main-input" />
+                    <div class="input-controls">
+                        <div class="left-controls">
+                            <input type="file" id="pdfUpload" accept=".pdf" style="display: none;" />
+                            <button class="icon-btn" id="uploadBtn"><span class="material-symbols-outlined">add</span></button>
+                            <button class="tool-btn">
+                                <span class="material-symbols-outlined">instant_mix</span> Tools
+                            </button>
+                        </div>
+                        <div class="right-controls">
+                            <button class="model-select-btn">Fast <span class="material-symbols-outlined">expand_more</span></button>
+                            <button class="icon-btn"><span class="material-symbols-outlined">mic</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suggestion Pills -->
+                <div class="suggestions-container">
+                    <button class="suggestion-pill">
+                        <span class="pill-icon">🖼️</span> Create image
+                    </button>
+                    <button class="suggestion-pill">
+                        <span class="pill-icon">🏏</span> Follow IPL
+                    </button>
+                    <button class="suggestion-pill">
+                        <span class="pill-icon">🎸</span> Create music
+                    </button>
+                    <button class="suggestion-pill">
+                        Help me learn
+                    </button>
+                    <button class="suggestion-pill">
+                        Boost my day
+                    </button>
+                    <button class="suggestion-pill">
+                        Write anything
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
